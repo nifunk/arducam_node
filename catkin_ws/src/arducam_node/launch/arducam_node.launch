@@ -1,0 +1,8 @@
+<launch>
+	<arg name="cam_model" default="$(find arducam_node)/cfg/MT9J001_10MP.json" doc="specify camera model"/>
+
+	<param name="~cam_model" value="$(arg cam_model)" type="string"/>
+
+    <node name="arducam_node" pkg="arducam_node" type="arducam.py" output="screen">
+    </node>
+</launch>
